@@ -1,0 +1,891 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: Inter, sans serif;
+}
+hr{
+    border: 1px solid whitesmoke;
+}
+.first{
+    height: 100vh;
+    width: 100%;
+    background-image: url("/bread-wave/assets/bg-placeholder-vid-min.jpg");
+    background-color: rgba(34, 34, 34, 0.878);
+    background-blend-mode: darken;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    /* background-color: rgba(34, 34, 34, 0.88); */
+    align-items: center;
+    padding: 0px 160px 0px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    transform-origin: top;
+    animation-name: scrolling;
+    background-color: none;
+    animation-duration: 2s;
+    animation-timeline: scroll(block nearest);
+}
+
+@keyframes scrolling{
+    0%{
+        background-color: none;
+        height: 120px;
+        
+    }
+    100%{
+        transform: translate(0px 30px);
+        background-color:  rgba(34, 34, 34, 0.88);
+    }
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 14.7px;
+}
+.display:hover .more-div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 35px 25px 0px;
+    font-weight: 100;
+}
+.more-div{
+    height: 200px;
+    width: 170px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50px;
+    left: 860px;
+    display: none;
+    font-weight: 100;
+}
+.more-div a{
+    color: black;
+    font-size: 16px;
+    font-weight: 100;
+}
+.more-div div{
+    display: flex;
+    flex-direction: column;
+}
+.type{
+    border: none;
+    background-color: #f07d22;
+    font-size: small;
+    border-radius: 20px;
+    font-size: 10px;
+    height: 25px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 43px;
+}
+.links a{
+    font-weight: 500;
+}
+.logo{
+    font-weight: 800;
+}
+.more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.more a{
+    font-weight: 500;
+}
+.more button{
+    width: 105px;
+    height: 47px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+.menu{
+    display: none;
+    height: 40px;
+    width: 40px;
+}
+.top{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    padding: 0px 160px 0px;
+}
+.info{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.paid{
+    height: 48%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+.sell{
+    height: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sell div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.sell img{
+    height: 15px;
+    width: 15px;
+}
+.paid h1{
+    font-size: 48px;
+    font-weight: 900;
+    font-family: Recoleta bold;
+    /* src: url("/bread-wave/assets/recoleta-regulardemo.otf"); */
+}
+.paid span{
+    color: #f07d22;
+}
+.paid p{
+    font-size: 18px;
+    
+}
+.paid a{
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+}
+.arrow:hover {
+    display: flex;
+    gap: 8px;
+    /* animation-name: link;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease; */
+}
+/* @keyframes link{
+    100%{
+        padding-left: 7px;
+    }
+} */
+.form{
+    height: 63%;
+    width: 48%;
+    background-color: rgb(105, 104, 104);
+    border-radius: 10px;
+    padding: 32px 25px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.form div p{
+    font-size: 17px;
+}
+input{
+    display: block;
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: rgb(137, 137, 137);
+    font-family: Inter, sans serif;
+    padding: 10px;
+}
+input::placeholder{
+    color: white;
+    font-size: 15px;
+}
+input:focus::placeholder {
+    color: #f07d22;
+    font-size: 11px;
+    font-weight: bold;
+    position: relative;
+    bottom: 20px;
+}
+input:focus {
+    background-color: white;
+    outline: none;
+}
+.form button{
+    height: 15%;
+    width: 100%;
+    background-color: #f07d22;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.form div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 2px;
+}
+.form div p,a{
+    font-size: 15px;
+    font-weight: bold;
+}
+.form div a{
+    color: #f07d22;
+}
+.second{
+    height: 140vh;
+    width: 100%;
+    padding: 120px 160px 120px;
+    color: black;
+}
+.promote{
+    width: 50%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: large;
+}
+.promote h1{
+    font-size: 32px;
+    font-family: Recoleta bold;
+    line-height: 1.2;
+}
+.promote span{
+    color: #f07d22;
+}
+.sellers{
+    height: 31px;
+    width: 90px;
+    background-color: #f1e7fd;
+    color: #7d22f0;
+    font-size: 13px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+}
+.tools{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('/bread-wave/assets/img-sellers-spot.svg');
+    background-size: auto 67%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: center;
+}
+.tool{
+    height: 20%;
+    width: 30.9%;
+    font-size: 18px;
+    font-weight: 10px;
+}
+.tool span{
+    color: black;
+    font-weight: bold;
+}
+.store{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+.store button{
+    height: 49px;
+    width: 155px;
+    background-color: #f07d22;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.store a{
+    color: black;
+    font-size: 15px;
+}
+.moving{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.move{
+    height: 40%;
+    width: 150%;
+    background-color: white;
+    display: flex;
+    gap: 25px;
+    animation-name: shift;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-direction: normal; */
+}
+.differently{
+    animation-direction: reverse;
+}
+.move div{
+    height: 100%;
+    width: 180px;
+    border: 2px solid whitesmoke;
+    border-radius: 40px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.move .online{
+    width: 220px;
+}
+.move .online img{
+    width: 24%;
+    height: 100%;
+}
+.differently .pdf{
+    width: 130px;
+}
+.differently .pdf img{
+    width: 40%;
+}
+.differently .buyandsell{
+    width: 350px;
+    border: 2px solid #fcefe6;
+}
+.differently .buyandsell img{
+    width: 15%;
+}
+.differently .buyandsell p{
+    color: #f07d22;
+}
+@keyframes shift{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(-40%);
+    }
+}
+.move div p{
+    color: rgba(0, 0, 0, 0.666);
+    font-size: 18.5px;
+    font-weight: bold; 
+}
+.move div img{
+    height: 100%;
+    width: 29%;
+}
+.third{
+    height: 110vh;
+    width: 100%;
+    padding: 120px 160px 120px;
+}
+.third .two{
+    height: 25%;
+    width: 54%;
+}
+.affiliate{
+    height: 32px;
+    width: 110px;
+    font-size: 13px;
+    border-radius: 20px;
+    border: none;
+    color: #f02322;
+    background-color: #fde7e7;
+    font-weight: bold;
+    border: 1px solid whitesmoke;
+}
+.third .next{
+    height: 75%;
+    background-image: url('/bread-wave/assets/img-aff-spot.svg');
+    background-size: auto;
+    background-position-y: center;
+}
+.third .sell{
+    height: 26%;
+    width: 35%;
+    font-size: 18px;
+    font-weight: 10px;
+}
+.store .get{
+    width: 165px;
+    height: 48px;
+}
+.fourth{
+    height: 130vh;
+    width: 100%;
+    background-color: #f7f8f9;
+    padding: 120px 160px 120px;
+    font-size: large;
+    background-image: url('/bread-wave/assets/ic-mart-more\ \(1\).svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 250px;
+}
+.ways{
+    height: 10%;
+    width: 60%;
+}
+.ways h1{
+    font-size: 32px;
+    line-height: 1.2;
+    font-family: Recoleta bold;
+}
+.ways span{
+    color: #f07d22;
+}
+.platform{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+}
+.limit{
+    height: 30%;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.limit div{
+    display: flex;
+    flex-direction: column;
+    height: 53%;
+    justify-content: space-between;
+}
+.limit h2{
+    font-size: 18px;
+}
+.limit p{
+    font-size: 17px;
+}
+.limit button{
+    height: 49px;
+    width: 155px;
+    background-color: #f07d22;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.earn-more{
+    width: 30%;
+    height: 54%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.earn-more div h3{
+    font-size: 18px;
+}
+.earn-more div{
+    height: 19%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.earn-more div p{
+    font-size: 14.5px;
+}
+.earn-more a{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+.five{
+    height: 83vh;
+    width: 100%;
+    padding: 120px 160px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.advantage{
+    width: 50%;
+    height: 30%;
+}
+.advantage span{
+    color: #f02322;
+}
+.advantage h1{
+    font-size: 32px;
+    line-height: 1.2;
+    font-family: Recoleta bold;
+}
+.money{
+    height: 70%;
+    background-image: url('/bread-wave/assets/bg-currencies-new.svg');
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.align{
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    height: 50%;
+}
+.add{
+    height: 30%;
+}
+.line{
+    height: 22px;
+    width: 4px;
+    background-color: #f07d22;
+    border-radius: 4px;
+}
+.main{
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.powered{
+    display: flex;
+    gap: 25px;
+    height: 20%;
+}
+.currency{
+    height: 57%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.currency p{
+    font-size: 14px;
+}
+.currency div h2{
+    font-size: 19px;
+}
+.currency div{
+    width: 100%;
+}
+.recharge{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recharge p{
+    font-size: 14px;
+}
+.recharge div h2{
+    font-size: 19px;
+}
+.recharge div{
+    width: 100%;
+}
+.sixth{
+    height: 120vh;
+    width: 100%;
+    padding: 120px 160px 0px;
+
+}
+.reward{
+    height: 30%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.reward h1{
+    font-size: 32px;
+    line-height: 1.2;
+    font-family: Recoleta bold;
+}
+.reward span{
+    color: #f07d22;
+}
+.buyers{
+    height: 31px;
+    width: 90px;
+    background-color: #fdf1e7;
+    color: #f07d22;
+    font-size: small;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid whitesmoke;
+    font-weight: bold;
+}
+.cash{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url('/bread-wave/assets/img-buyers-sec.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: auto 80%;
+}
+.get{
+    width: 34%;
+}
+.get p{
+    font-size: 18px;
+}
+.seven{
+    height: 60vh;
+    width: 100%;
+    padding: 0px 160px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contains{
+    height: 80%;
+}
+.contains div:hover .information{
+    display: flex;
+}
+.contains .thenext:hover .down{
+    display: flex;
+}
+.contains div{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.contains .information{
+    height: 160px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 3;
+    top: 48px;
+    align-items: start;
+    display: none;
+}
+.contains .thenext .down{
+    height: 100px;
+    top: 50px;
+    display: flex;
+    justify-content: start;
+    padding-top: 20px;
+    display: none;
+}
+.contains .information p{
+    font-size: 14px;
+}
+.contains .information span{
+    font-weight: bold;
+}
+.contains div h2{
+    font-size: 18px;
+    font-weight: 590;
+}
+.seven  button{
+    height: 48px;
+    width: 130px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.895);
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 560;
+}
+.eight{
+    height: 90vh;
+    width: 100%;
+    padding: 120px 160px 120px;
+    color: white;
+}
+.eight .start{
+    height: 100%;
+    width: 100%;
+    background-image: url('/bread-wave/assets/bg-cta.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    padding: 70px 155px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.start div{
+    height: 62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.start div h1{
+    font-size: 48px;
+    width: 80%;
+    font-family: Recoleta bold;
+    line-height: 1.2;
+}
+.start div h1 span{
+    color: #f07d22;
+}
+.start div p span{
+    font-weight: bold;
+}
+.start p{
+    font-size: 15px;
+}
+.start button{
+    height: 50px;
+    width: 200px;
+    background-color: #f07d22;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.footer{
+    height: 87.5vh;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 120px 160px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    height: 64%;
+}
+.at{
+    width: 50%;
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.foot .at a{
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+}
+.foot .at span{
+    font-size: 11px;
+}
+.foot-links{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    width: 50%;
+    height: 60%;
+}
+.foot-links a{
+    text-decoration: none;
+    color: black;
+}
+.bold{
+    font-weight: bold;
+}
+.items{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.items div{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    justify-content: space-between;
+}
+.items div a{
+    font-weight: 400;
+}
+.note{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note p{
+    font-size: 13px;
+}
+.stick{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: none;
+    background-color: white;
+    position: fixed;
+    top: 92vh;
+    left: 96%;
+    box-shadow: 3px 3px 3px rgba(34, 34, 34, 0.878);
+}
+.stick svg{
+    height: 24px;
+    width: 24px;
+}
+.stick:hover{
+    background-color: black;
+}
+.stick:hover svg{
+    color: white;
+}
+.here{
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    top: 89.2%;
+    left: 94.5%;
+    background-color: #f07d22;
+    border: none;
+    border-radius: 100%;
+    color: white;
+}
+.here svg{
+    color: white;
+}
