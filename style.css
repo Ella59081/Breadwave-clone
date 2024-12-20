@@ -32,8 +32,8 @@ hr{
 nav{
     display: flex;
     justify-content: space-between;
-    height: 120px;
-    /* background-color: rgba(34, 34, 34, 0.88); */
+    height: 70px;
+    background-color: rgba(34, 34, 34, 0.88);
     align-items: center;
     padding: 0px 160px 0px;
     position: fixed;
@@ -75,7 +75,7 @@ nav a{
     background-color: rgb(255, 255, 255);
     position: absolute;
     top: 50px;
-    left: 860px;
+    left: 870px;
     display: none;
     font-weight: 100;
 }
@@ -375,21 +375,21 @@ input:focus {
     width: 220px;
 }
 .move .online img{
-    width: 24%;
+    width: 21%;
     height: 100%;
 }
 .differently .pdf{
     width: 130px;
 }
 .differently .pdf img{
-    width: 40%;
+    width: 35%;
 }
 .differently .buyandsell{
     width: 350px;
     border: 2px solid #fcefe6;
 }
 .differently .buyandsell img{
-    width: 15%;
+    width: 13%;
 }
 .differently .buyandsell p{
     color: #f07d22;
@@ -409,7 +409,7 @@ input:focus {
 }
 .move div img{
     height: 100%;
-    width: 29%;
+    width: 25.5%;
 }
 .third{
     height: 110vh;
